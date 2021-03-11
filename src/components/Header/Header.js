@@ -6,17 +6,17 @@ import img from '../../image/header-bg.jpg'
 
 const Header = (props) => {
 
-    let {teamLogo, detailsHeaderBg} = props;
+    let { teamLogo, detailsHeaderBg } = props;
 
     let detailHeaderBg = {
         backgroundImage: `url('${detailsHeaderBg}')`
-    }   
+    }
     let homeHeaderBg = {
         backgroundImage: `url('${img}')`
-    }  
+    }
     return (
-        <div className='header-area'>
-            <Navbar className='navbar-bg'>
+        <>
+            <Navbar className='navbar-bg' sticky="top">
                 <div className="container">
                     <Navbar.Brand as={Link} to='/'>BCL</Navbar.Brand>
                     <Nav className="ms-auto">
@@ -24,12 +24,14 @@ const Header = (props) => {
                     </Nav>
                 </div>
             </Navbar>
-            <div style={( detailsHeaderBg === undefined) ? homeHeaderBg : detailHeaderBg} className="header-bg">
-                {
-                    (teamLogo !== undefined) ? <img src={teamLogo} alt="" /> : <h1> Bhuiyan's Champoins League</h1>
-                }
+            <div className='header-area'>
+                <div style={(detailsHeaderBg === undefined) ? homeHeaderBg : detailHeaderBg} className="header-bg">
+                    {
+                        (teamLogo !== undefined) ? <img src={teamLogo} alt="" /> : <h1> Bhuiyan's Champoins League</h1>
+                    }
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
