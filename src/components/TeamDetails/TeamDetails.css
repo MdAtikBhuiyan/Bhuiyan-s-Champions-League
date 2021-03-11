@@ -1,0 +1,25 @@
+.social-area a{
+    margin-right: 10px;
+    color: white;
+}
+.social-area a:last-child{
+    margin-right: 10px;
+}
+.details-area{
+    background: radial-gradient(#717ead, #a986ad);
+    color:white;
+    padding: 20px 0 35px;
+}
+.banner{
+    background: #715a92;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px 10px !important;
+    /* #FC4D57 */
+}
+.details-img img{
+    width: 100%;
+}
+.details-content span{
+    margin-right: 6px;
+}
