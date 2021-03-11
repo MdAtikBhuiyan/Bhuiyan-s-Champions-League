@@ -22,12 +22,12 @@ const TeamDetails = () => {
     }, [teamId]);
 
     
-    const { strTeamBadge,strTeam, intFormedYear, strCountry, strSport, strGender, strDescriptionEN, strStadiumDescription, strTwitter, strFacebook, strYoutube } = team;
+    const { strTeamBadge,strTeam, intFormedYear, strCountry, strSport, strGender, strDescriptionEN, strStadiumDescription, strTwitter, strFacebook, strYoutube,strStadiumThumb } = team;
 
 
     return (
         <>
-            <Header  teamLogo={strTeamBadge} />
+            <Header  teamLogo={strTeamBadge} detailsHeaderBg={strStadiumThumb} />
             <div className='details-area'>
                 <Container>
 

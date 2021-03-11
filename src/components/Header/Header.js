@@ -6,12 +6,12 @@ import img from '../../image/header-bg.jpg'
 
 const Header = (props) => {
 
-    let {teamLogo,stadiumImg} = props;
+    let {teamLogo, detailsHeaderBg} = props;
 
-    let headerBg = {
-        backgroundImage: `url('${stadiumImg}')`
+    let detailHeaderBg = {
+        backgroundImage: `url('${detailsHeaderBg}')`
     }   
-    let headerBg2 = {
+    let homeHeaderBg = {
         backgroundImage: `url('${img}')`
     }  
     return (
@@ -24,7 +24,7 @@ const Header = (props) => {
                     </Nav>
                 </div>
             </Navbar>
-            <div style={(stadiumImg === undefined) ? headerBg2 : headerBg} className="header-bg">
+            <div style={( detailsHeaderBg === undefined) ? homeHeaderBg : detailHeaderBg} className="header-bg">
                 {
                     (teamLogo !== undefined) ? <img src={teamLogo} alt="" /> : <h1> Bhuiyan's Champoins League</h1>
                 }
