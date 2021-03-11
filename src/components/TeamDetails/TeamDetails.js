@@ -12,17 +12,16 @@ import Header from '../Header/Header';
 const TeamDetails = () => {
 
     const { teamId } = useParams();
-    console.log('p', teamId)
 
     const [team, setTeam] = useState([]);
 
-    useEffect(() => {
+    useEffect( () => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`)
             .then(response => response.json())
             .then(data => setTeam(data.teams[0]))
-    }, [teamId])
+    }, [teamId]);
 
-    console.log('s', team);
+    
     const { strTeamBadge,strTeam, intFormedYear, strCountry, strSport, strGender, strDescriptionEN, strStadiumDescription, strTwitter, strFacebook, strYoutube } = team;
 
 

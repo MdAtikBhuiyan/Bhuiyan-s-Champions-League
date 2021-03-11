@@ -1,11 +1,19 @@
 import React from 'react';
 import './Header.css';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import img from '../../image/header-bg.jpg'
 
 const Header = (props) => {
-    let teamLogo = props.teamLogo;
-    console.log(typeof teamLogo)
+
+    let {teamLogo,stadiumImg} = props;
+
+    let headerBg = {
+        backgroundImage: `url('${stadiumImg}')`
+    }   
+    let headerBg2 = {
+        backgroundImage: `url('${img}')`
+    }  
     return (
         <div className='header-area'>
             <Navbar className='navbar-bg'>
@@ -16,7 +24,7 @@ const Header = (props) => {
                     </Nav>
                 </div>
             </Navbar>
-            <div className="header-bg">
+            <div style={(stadiumImg === undefined) ? headerBg2 : headerBg} className="header-bg">
                 {
                     (teamLogo !== undefined) ? <img src={teamLogo} alt="" /> : <h1> Bhuiyan's Champoins League</h1>
                 }

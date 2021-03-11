@@ -1,9 +1,9 @@
 .header-bg{
-    background-image:url(../../image/header-bg.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,15 +22,6 @@
 .header-bg img{
   width: 200px;
 }
-
-@media screen and (max-width: 767px) {
-  .header-area h1{
-    width: 80%;
-    margin: auto;
-    font-size: 26px;
-    padding: 10px 6px;
-  }
-}
 .navbar-bg{
   background-color: #6610f2;
 }
@@ -40,4 +31,12 @@
 }
 .navbar-brand{
   font-size: 32px !important;
+}
+@media screen and (max-width: 767px) {
+  .header-area h1{
+    width: 80%;
+    margin: auto;
+    font-size: 26px;
+    padding: 10px 6px;
+  }
 }
